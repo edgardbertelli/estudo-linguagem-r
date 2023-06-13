@@ -1,0 +1,21 @@
+# Vectors
+
+```{r}
+# numeric vector
+a <- c(1, 2, 5, 3, 6, -2, 4)
+
+# character vector
+b <- c("one", "two", "three")
+
+# logical vector
+c <- c(TRUE, TRUE, TRUE, FALSE, TRUE, FALSE)
+
+# refering to elements
+a[3]
+a[c(1, 3, 5)]
+a[2:6]
+
+# generating a sequence of numbers
+a <- c(2:6)
+a
+```

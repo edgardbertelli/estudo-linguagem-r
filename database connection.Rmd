@@ -1,0 +1,16 @@
+# Database connection
+
+```{r}
+
+library(RODBC)
+
+myconn <- odbcConnect("mysql")
+
+# Retrieve table as a data frame.
+res <- sqlFetch(myconn, "clients")
+
+res
+
+close(myconn)
+
+```
