@@ -1,0 +1,82 @@
+# Prática em R
+
+## Faça você mesmo
+
+1.  Crie duas variáveis Ana e Paulo e atribua a elas valores de suas idades, sendo respectivamente 8 e 12 anos. As variáveis devem ser do tipo inteiro. Imprima no console "A menina é mais velha" ou "O menino é mais velho" como resultado de um teste lógico.
+
+    ```{r}
+
+    Ana = 8
+    Paulo = 12
+
+    if(Ana > Paulo){
+      print("A menina é mais velha.")
+    } else {
+      print("O menino é mais velho.")
+    }
+    ```
+
+2.  BOD é um objeto existente no R. Verifique qual a classe deste objeto.
+
+    ```{r}
+
+    class(BOD)
+    ```
+
+3.  Crie um vetor que armazene números de 1 a 10 e posteriormente imprima os valores pares.
+
+    ```{r}
+
+    myvector = c(1:10)
+
+    for (x in myvector) {
+      if(x %% 2 == 0) {
+        print(x)
+      }
+    }
+    ```
+
+4.  *women* é um dataframe existente no R. Imprima as 10 últimas linhas.
+
+    ```{r}
+
+    tail(women, 10)
+    ```
+
+5.  Use a função plot do R para produzir um gráficos atributos *Sepal.Width* e *Petal.Length* do conjunto de dados Iris. O gráfico deve imprimir apenas as linhas de 50 até 100.
+
+    ```{r}
+
+    sepalWidth = iris$Sepal.Width[50:100]
+    sepalLength = iris$Sepal.Length[50:100]
+
+    plot(sepalWidth, sepalLength)
+    ```
+
+6.  Crie dois vetores de tamanhos iguais, some as posições equivalentes dos vetores e imprima o resultado.
+
+    ```{r}
+
+    vectorA = c(24, 35, 12, 76, 45, 95)
+    vectorB = c(54, 63, 86, 3, 71, 85)
+    vectorC = c()
+
+    x = 1
+
+    while (x <= length(vectorA)) {
+      vectorC[x] = vectorA[x] + vectorB[x]
+      x = x +1
+    }
+
+    vectorC
+    ```
+
+7.  Imprima o número de linhas, de colunas, nomes das linhas e nomes das colunas do conjunto de dados CO2.
+
+    ```{r}
+
+    nrow(CO2)
+    ncol(CO2)
+    rownames(CO2)
+    colnames(CO2)
+    ```
